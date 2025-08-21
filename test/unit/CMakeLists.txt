@@ -26,7 +26,7 @@ add_executable(boost_ws_io_tests ${PFILES} ${EXTRAFILES})
 if (MSVC)
     target_compile_options(boost_ws_io_tests PRIVATE "/bigobj")
 endif()
-target_include_directories(boost_ws_io_tests PRIVATE . ../../../url/extra)
+target_include_directories(boost_ws_io_tests PRIVATE . ../../../url/extra/test_suite)
 target_include_directories(boost_ws_io_tests PRIVATE "${PROJECT_SOURCE_DIR}")
 target_link_libraries(boost_ws_io_tests PRIVATE
     OpenSSL::SSL

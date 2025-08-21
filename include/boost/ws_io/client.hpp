@@ -12,7 +12,7 @@
 
 #include <boost/ws_io/detail/config.hpp>
 #include <boost/ws_proto/client.hpp>
-#include <boost/http_proto/context.hpp>
+#include <boost/rts/context_fwd.hpp>
 #include <boost/http_proto/response_view.hpp>
 #include <boost/http_proto/request.hpp>
 #include <boost/asio/async_result.hpp>
@@ -56,7 +56,7 @@ public:
 
     client(
         AsyncStream& stream,
-        http_proto::context& ctx);
+        rts::context& ctx);
 
     AsyncStream&
     next_layer() noexcept
@@ -112,7 +112,7 @@ private:
     struct run_handshake_op;
 
     AsyncStream& stream_;
-    http_proto::context& ctx_;
+    rts::context& ctx_;
 };
 
 } // ws_io

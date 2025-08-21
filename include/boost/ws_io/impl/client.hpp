@@ -84,7 +84,7 @@ template<class AsyncStream>
 client<AsyncStream>::
 client(
     AsyncStream& stream,
-    http_proto::context& ctx)
+    rts::context& ctx)
     : stream_(stream)
     , ctx_(ctx)
 {

@@ -8,7 +8,7 @@
 //
 
 #include <boost/ws_io/client.hpp>
-#include <boost/http_proto/context.hpp>
+#include <boost/rts/context.hpp>
 #include <boost/http_proto/parser.hpp>
 #include "test/unit/server.hpp"
 #include "test_suite.hpp"
@@ -21,7 +21,7 @@ struct client_test
     void
     run()
     {
-        http_proto::context ctx;
+        rts::context ctx;
         http_proto::parser::config_base cfg;
         http_proto::install_parser_service(ctx, cfg);
 
